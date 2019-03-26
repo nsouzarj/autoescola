@@ -1,0 +1,1 @@
+onAddAluno={this.handleAddAluno}

@@ -7,16 +7,14 @@ import Opcao from '../componentes/Opcao';
 import MenuLateral from '../componentes/MenuLateral';
 import SobreOcurso from '../componentes/SobreOcurso';
 import Alunos from '../alunos/Alunos';
-import AulaTeorica from '../Cursos/AulaTeorica';
+import Turmas  from '../turmas/Turmas';
 /**
  * Esta classe menu chama o componente de botoes principal da aplicacao
  */
 class Menu extends React.Component {
   state = {
-    notes: [],
     isLoading: false,
     isMenuOpen: false,
-    reloadHasError: false,
     saveHasError: false
   };
 
@@ -32,8 +30,7 @@ class Menu extends React.Component {
     const {
       isLoading,
       isMenuOpen,
-      saveHasError,
-      reloadHasError
+      saveHasError
     }= this.state;
     return (
       <Router>
@@ -45,7 +42,7 @@ class Menu extends React.Component {
                     <React.Fragment>
                       <Route path="/" exact component={Opcao} />
                       <Route path="/alunos"  component={Alunos} />
-                      <Route path="/aulas"  component={AulaTeorica} />
+                      <Route path="/turmas"   component={Turmas} />
                       <Route path="/sobre"  component={SobreOcurso} />
                     </React.Fragment>
                 </div>
